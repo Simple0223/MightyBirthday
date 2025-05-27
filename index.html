@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Poppins', 'Microsoft JhengHei', sans-serif;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .bg-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://github.com/Simple0223/IreneBirthday/blob/main/background0.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.6);
+            z-index: -1;
+        }
+
+
+        h1 {
+            font-size: 3rem;
+            color: #0a2245;
+            margin: 30px 0;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            color: #555;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        h5 {
+            font-size: 1rem;
+            color: #022f6e;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        h2#hint {
+            font-size: 1.5rem;
+            color: red;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .custom-btn {
+            margin: 20px auto;
+            background-color: #a0c4ff;
+            border: none;
+            color: #FFF;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .bg-fixed {
+                background-image: url('https://github.com/Simple0223/IreneBirthday/blob/main/background1.jpg?raw=true');
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .custom-btn:hover {
+                background-color: #2b7dff;
+                box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            .custom-btn:active {
+                background-color: #72a6f9;
+                box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-fixed"></div>
+    <div class="overlay"></div>
+    <button class="custom-btn" onclick="toBible()">抽取經文</button>
+    <button id="hintButton" style="display: none;" class="custom-btn" onclick="toPicture()">看圖說故事</button>
+    <h1>生日卡片</h1>
+    <h2 id="hint">想看嗎？生日到了才給妳看😜</h2>
+    <h5 id="birthdayCard" style="display: none;">
+        Dear 芝琳
+        <br>芝琳生日快樂！
+        <br>在這重要的一天，我想說真的很開心能夠認識妳。
+        <br>我超級感動妳為我做的生日影片，
+        <br>要求大家錄一段影片真的很不容易。
+        <br>頭尾還放了我最愛的卡比主題曲，簡直不要太頂！
+        <br><s>能給我把佳婕拿掉的版本嗎？這樣對心臟比較好XD</s>
+        <br>我感受到這影片是妳為我做的服務的行動，
+        <br>也是長存不會朽壞的專屬的禮物，
+        <br>裡面滿有肯定的言詞，因著妳傾注了時間與心思，
+        <br>我感受到妳所花的精心時刻。
+        <br>這影片幾乎蘊含所有愛之語了呢！
+        <br>在妳生日的寶貴日子裡，我也想要好好的祝福妳，
+        <br>即使觀察人和表達我都不擅長，我還是要來尊榮妳。
+        <br>
+        <br>我覺得妳是很真誠又願意溝通的人，
+        <br>妳的每一個情緒跟表達都讓我感受到真實的妳。
+        <br>同時妳也是一個很會尊榮人的人。
+        <br>因為我對自己不是很有自信，
+        <br>我難以分辨肯定的言語是否真心。
+        <br>但在每一次被妳真誠的尊榮後，
+        <br>我也可以更有自信、更認同自己。
+        <br>
+        <br>我也覺得妳是一個情感豐富的人，
+        <br>同時也能夠敏銳身邊的人的狀態與情緒。
+        <br>上次在東區的公園妳們逼問敬司為什麼心情不好，
+        <br>遲鈍如我還以為妳們只是想吃瓜，
+        <br>想不到是真的讀懂了司的心思，
+        <br>並且給予了幫助與肯定，讓我很是震驚。
+        <br>我覺得妳對人的情緒與需要好敏銳，
+        <br>為身邊的人著想的心好美。
+        <br>跟情感豐富的妳們相處生活豐富了起來。
+        <br>
+        <br>妳是一個節儉的人，
+        <br>妳在買自己的東西時會考量價格。
+        <br>有多件想要的衣服也會細細思考，
+        <br>詢問大家的建議，並且選出最適合的那一件！
+        <br>然而這樣的妳，
+        <br>為了團體行動還是願意支付昂貴的餐廳。
+        <br><s>還是說妳省錢就是為了吃好料的？！</s>
+        <br>每次吃比較貴的餐廳時，
+        <br>我都會想妳的心是不是在淌血，
+        <br>但也代表妳真的很愛大家。
+        <br>
+        <br>妳還有一個我覺得相對稀少的特質，
+        <br>妳是一個溫柔體貼的女孩子。
+        <br>常常有些很貼心的小舉動，
+        <br>尤其在三井Outlet，
+        <br>我手術後不便時跑過來幫我拿餐，
+        <br>我真的覺得很窩心，
+        <br>在這個講求個人主義的現代，
+        <br>妳的體貼和溫暖，像蓮花般出淤泥而不染。
+        <br>
+        <br>看到妳還是學生的時候，
+        <br>就已經有為神擺上的心，我感到於有榮焉。
+        <br>不論是招待、舞團、小組長的職分上，
+        <br>都闡明妳是一個認真愛神的人。
+        <br>印象特別深刻的是為了舞團表演時的衣服，
+        <br>在台上想穿得好的看是人之常情，
+        <br>我看到妳在自己的想要上選擇順服神，
+        <br>也很有智慧的跟團員溝通，
+        <br>果然神帶領妳當團長滿有祂的美意。
+        <br>
+        <br>每當要看妳的照片，都要經過妳嚴格的審核，
+        <br>美若天仙才能給我們看。
+        <br>靖翎姐說妳拍照無死角，妳不相信嗎XD
+        <br>妳可能會羨慕雙眼皮的大眼睛、
+        <br>更挺的鼻樑、或是妳認為更好看的臉型。
+        <br>但就只有妳的五官搭起來，
+        <br>才是我們獨一無二的芝琳，只有芝琳沒有之一！
+        <br><s>所以可以少花一點時間挑照片了嗎哈哈哈哈</s>
+        <br>外貌長相會隨著時間流逝，
+        <br>自信與自我價值如果過多建立在這是很危險的。
+        <br>最美的化妝品不是粉底、眼影、口紅，
+        <br>而是智慧、溫柔、良善等美好的屬性。
+        <br>
+        <br>不小心打了這麼多內容，
+        <br>知道為什麼我要用電子版了吧？手寫根本寫不完。
+        <br><s>請不要說是我懶得寫字</s>
+        <br>妳知道的，我不善於說說謊，
+        <br>在妳生日更不會這麼做，
+        <br>以上言論以我至今信實的品格為證，毫無虛言。
+        <br>
+        <br>以下給妳介紹一下我想給妳的三個禮物：
+        <br>在想要送什麼禮物的時候，
+        <br>我發現妳平時都沒表現出喜歡什麼，
+        <br>怎麼會有這麼神秘的女子XD
+        <br>還好我還在國中團隊時給妳們辦迎新，
+        <br>有獲得妳喜歡老鼠的情報。
+        <br>所以我預備的前兩個禮物就是老鼠的扭蛋！
+        <br>第一個是把起司獻出去的老鼠，
+        <br>眾所周知，鼠愛起司，
+        <br>透過這個禮物我想跟妳說，
+        <br>妳為了神所放下的一切神都顧念。
+        <br>而妳真正需要的，祂已為妳預備，
+        <br>期待妳所獻上的能越來越合神的心意。
+        <br>
+        <br>另一個鼠妳的扭蛋是倉鼠跑輪的扭蛋，
+        <br>希望能在妳覺得自己停滯不前時鼓勵到妳，
+        <br><s>這隻倉鼠比妳還慘！</s>
+        <br>神的帶領就像在跑輪上加裝發電機一般，
+        <br>妳的一切工都不會是徒勞的。
+        <br>妳可能覺得組員沒有更愛神、更認識神;
+        <br>可能有覺得自己還有很多不足的時候;
+        <br>或著懷疑自己做的事對神的國是否有貢獻，
+        <br>不管妳帶有什麼懷疑，神都不會讓妳白費，
+        <br>所有的一切都會互相效力，
+        <br>使愛神的妳得益處。
+        <br>妳所有付出的跟經歷的都會化為妳成長的養份，
+        <br>
+        <br>最後一個禮物是紀念我們一起演的戲。
+        <br>很開心能跟妳一起演戲，
+        <br>妳一定會像諾亞的妻子那樣成為很棒的幫助者。
+        <br>所以送上象徵物——諾亞方舟。
+        <br>希望它不只承載著各種動物，
+        <br>也能承載我們過去許多美好的回憶、
+        <br>收藏每個當下的點點滴滴、
+        <br>並且持續航我們美好的未來。
+        <br>
+        <br>by Simple
+        <br>
+        <br>
+    </h5>
+
+    <script>
+        function toBible() {
+            window.location.href = "https://simple0223.github.io/IreneBirthday/ScriptureForIrene";
+        }
+
+        function toPicture() {
+            window.location.href = "https://simple0223.github.io/IreneBirthday/BirthdayPicture";
+        }
+
+        const button = document.querySelector('.custom-btn');
+
+        button.addEventListener('touchstart', function() {
+            button.style.backgroundColor = '#2b7dff';
+        });
+
+        button.addEventListener('touchend', function() {
+            button.style.backgroundColor = '#a0c4ff';
+        });
+
+        const showDate = new Date("2025-04-08T00:00:00");
+
+        const now = new Date();
+
+        if (now >= showDate) {
+            document.getElementById("hint").style.display = "none";
+            document.getElementById("hintButton").style.display = "block";
+            document.getElementById("birthdayCard").style.display = "block";
+        }
+    </script>
+</body>
+</html>
