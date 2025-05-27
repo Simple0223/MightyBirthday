@@ -1,134 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>啟示錄七題闖關挑戰</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Poppins', 'Microsoft JhengHei', sans-serif;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            overflow-x: hidden;
-        }
+  <style>
+  body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    padding: 20px;
+  }
 
-        .question {
-      background: rgba(0,0,0,0.6);
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 10px;
+  /* 預設為直式背景（手機） */
+  body {
+    background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/straightBackground.png?raw=true'); /* 換成你直式圖的檔名 */
+  }
+
+  /* 橫式時切換背景（橫向手機或桌機） */
+  @media (orientation: landscape) {
+    body {
+      background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/horizontalBackground.png?raw=true'); /* 換成你橫式圖的檔名 */
     }
-    .question h3 {
-      margin-top: 0;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      background-color: #FFD700;
-      color: #000;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #FFA500;
-    }
+  }
 
-        /*電腦畫面*/
-        .bg-fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/horizontalBackground.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            z-index: -2;
-        }
-        
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.6);
-            z-index: -1;
-        }
-
-
-        h1 {
-            font-size: 3rem;
-            color: #0a2245;
-            margin: 30px 0;
-            font-weight: 700;
-        }
-
-        h4 {
-            font-size: 1.25rem;
-            color: #555;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-
-        h5 {
-            font-size: 1rem;
-            color: #022f6e;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-
-        h2#hint {
-            font-size: 1.5rem;
-            color: red;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-
-        .custom-btn {
-            margin: 20px auto;
-            background-color: #a0c4ff;
-            border: none;
-            color: #FFF;
-            padding: 12px 24px;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-            text-transform: uppercase;
-        }
-
-        /*手機版*/
-        @media (max-width: 768px) {
-            .bg-fixed {
-                background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/straightBackground.png?raw=true');
-            }
-        }
-        
-        @media (min-width: 769px) {
-            .custom-btn:hover {
-                background-color: #2b7dff;
-                box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.2);
-            }
-
-            .custom-btn:active {
-                background-color: #72a6f9;
-                box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
-            }
-        }
-    </style>
+  .question {
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .question h3 {
+    margin-top: 0;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFD700;
+    color: #000;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #FFA500;
+  }
+</style>
 </head>
+<body>
 
-    <body>
   <h1>啟示錄七題闖關挑戰</h1>
+
   <form id="quizForm">
     <div class="question">
       <h3>1. 啟示錄中的七印是哪位羔羊打開的？</h3>
