@@ -15,14 +15,14 @@
 
   /* 預設為直式背景（手機） */
   body {
-    background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/straightBackground.png?raw=true'); /* 換成你直式圖的檔名 */
+    background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/straightBackground.png?raw=true'); /* 直式 */
   }
 
   /* 橫式時切換背景（橫向手機或桌機） */
   @media (orientation: landscape) {
-    body {
-      background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/horizontalBackground.png?raw=true'); /* 換成你橫式圖的檔名 */
-    }
+      body {
+          background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/horizontalBackground.png?raw=true'); /* 橫式 */
+      }
   }
 
   .question {
@@ -125,9 +125,9 @@
         }
       }
 
-      if (correct === 7) {
-        alert("挑戰成功！你答對了全部七題！");
-      } else {
+        if (correct === 7) {
+            window.location.href = "success.html";
+        } else {
         alert(`挑戰失敗，你只答對了 ${correct} 題，請再接再厲！`);
       }
     }
