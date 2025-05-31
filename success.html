@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>挑戰成功！</title>
     <style>
+        /* 預設為直式背景（手機） */
         body {
             margin: 0;
             padding: 0;
             font-family: "Microsoft JhengHei", sans-serif;
             text-align: center;
             color: #fff;
-            background-image: url('reward-bg.jpg'); /* 將此處換成你的橫式背景圖檔名 */
+            background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/cuccessStraight.jpg?raw=true');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -20,6 +21,13 @@
             justify-content: center;
             align-items: center;
             text-shadow: 2px 2px 4px #000;
+        }
+
+        /* 橫式時切換背景（橫向手機或桌機） */
+        @media (orientation: landscape) {
+            body {
+                background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/successHorizontal.jpg?raw=true');
+            }
         }
 
         h1 {
