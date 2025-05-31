@@ -9,18 +9,14 @@
             margin: 0;
             padding: 0;
             font-family: "Microsoft JhengHei", sans-serif;
-            text-align: center;
-            color: #fff;
             background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/cuccessStraight.jpg?raw=true');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-shadow: 2px 2px 4px #000;
+            background-attachment: fixed;
+            background-color: #f7f2e8;
+            text-align: center;
+            color: #333;
         }
 
         /* 橫式時切換背景（橫向手機或桌機） */
@@ -28,6 +24,23 @@
             body {
                 background-image: url('https://github.com/Simple0223/MightyBirthday/blob/main/successHorizontal.jpg?raw=true');
             }
+        }
+
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 248, 225, 0.8); /* 半透明底讓內容清晰 */
+            max-width: 480px;
+            margin: 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            max-width: 90%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         h1 {
@@ -60,11 +73,13 @@
     </style>
 </head>
 <body>
-    <h1>🎉 恭喜你完成啟示錄挑戰！</h1>
-    <p>你是真正的啟示錄解碼者！</p>
+    <div class="container">
+        <h1>🎉 恭喜你完成啟示錄挑戰！</h1>
+        <p>你是真正的啟示錄解碼者！</p>
 
-    <button class="btn" onclick="location.href='birthdayCard.html'">🎂 查看生日卡片</button>
-    <button class="btn" onclick="location.href='gift.html'">📥 領取禮物</button>
-    <button class="btn" onclick="location.href='index.html'">🔁 返回挑戰</button>
+        <button class="btn" onclick="location.href='birthdayCard.html'">🎂 查看生日卡片</button>
+        <button class="btn" onclick="location.href='gift.html'">📥 領取禮物</button>
+        <button class="btn" onclick="location.href='index.html'">🔁 返回挑戰</button>
+    </div>
 </body>
 </html>
